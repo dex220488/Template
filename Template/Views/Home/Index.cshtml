@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Template.Models.Sql.Models.TemplateTable>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Descripciôn</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="panel-container show">
+    <div class="panel-content">
+        <div class="panel-tag">
+            Dropzone does not handle your file uploads on the server. You have to implement the code to receive and store the file yourself. See the section Server side implementation for more information.
+        </div>
+        <form action="/upload" class="dropzone needsclick" style="min-height: 7rem;">
+            <div class="dz-message needsclick">
+                <i class="@(Settings.Theme.IconPrefix) fa-cloud-upload text-muted mb-3"></i> <br>
+                <span class="text-uppercase">Drop files here or click to upload.</span>
+                <br>
+                <span class="fs-sm text-muted">This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.</span>
+            </div>
+        </form>
+    </div>
+</div>

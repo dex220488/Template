@@ -1,0 +1,18 @@
+{
+  "href_howToUse": "controller_action",
+  "lists": [
+    {
+      "title": "Test",
+      "icon": "fal fa-info-circle",
+      "roles": [],
+      "items": [
+        {
+          "title": "Index",
+          "showOnSeed": false,
+          "href": "test_index",
+          "roles": []
+        }
+      ]
+    }
+  ]
+}
